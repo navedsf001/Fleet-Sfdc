@@ -1,0 +1,29 @@
+<template>
+    <lightning-card icon-name="custom:custom85">
+        <template if:true={bus.data}>
+            <span slot="title">{busName}</span>
+
+            <lightning-button-icon icon-name="utility:expand_alt" 
+                                   slot="actions" 
+                                   onclick={handleRecordNaviagtion}>
+            </lightning-button-icon>
+
+            <div class="slds-var-m-horizontal_medium">
+                <lightning-record-form object-api-name="Bus__c" 
+                                       record-id={busId} 
+                                       fields={busFieldArray} 
+                                       columns="2"
+                                       mode="readonly">
+                </lightning-record-form>
+            </div>
+        </template>
+
+        <template if:false={busId}>
+            <c-error-panel friendly-message="Select a bus to see details"></c-error-panel>
+        </template>
+
+        <template if:true={bus.error}>
+            <c-error-panel friendly-message="Error retrieving data" errors={bus.error}></c-error-panel>
+        </template>
+    </lightning-card>
+</template>

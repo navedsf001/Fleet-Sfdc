@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <logo>c6005_tn</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Fleet Management System</label>
+    <navType>Console</navType>
+    <tabs>Garage__c</tabs>
+    <tabs>Bus__c</tabs>
+    <tabs>Maintenance__c</tabs>
+    <tabs>Bus_Fleet</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Fleet_Management_System_UtilityBar</utilityBar>
+    <workspaceConfig>
+        <mappings>
+            <tab>Bus_Fleet</tab>
+        </mappings>
+        <mappings>
+            <tab>Bus__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Garage__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Maintenance__c</tab>
+        </mappings>
+    </workspaceConfig>
+</CustomApplication>

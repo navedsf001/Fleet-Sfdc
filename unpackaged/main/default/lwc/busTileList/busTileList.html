@@ -1,0 +1,26 @@
+<template>
+    <div class="slds-card slds-var-p-around_small">
+        <template if:true={busPageResultWrapper.data}>
+            <div class="slds-grid slds-wrap">
+                <template for:each={busPageResultWrapper.data.busRecords} 
+                          for:item="bus">
+                    <c-bus-tile bus={bus} 
+                                key={bus.Id} 
+                                onselected={handleBusSelected} 
+                                class="slds-col slds-var-m-around_xx-small">
+                    </c-bus-tile>
+                </template>
+            </div>
+            
+            <c-paginator page-number={pageNumber} 
+                         page-size={pageSize} 
+                         total-item-count={busPageResultWrapper.data.totalItemCount} 
+                         onprevious={handlePreviousPage} 
+                         onnext={handleNextPage}>
+            </c-paginator>
+        </template>
+        <template if:true={busPageResultWrapper.error}>
+            <c-error-panel friendly-message="Error retrieving data" errors={busPageResultWrapper.error}></c-error-panel>
+        </template>
+    </div>
+</template>

@@ -1,0 +1,11 @@
+<template>
+    <a onclick={handleBusSelected}>
+        <div class="tile" style={backgroundImageStyle}>
+            <div class="lower-third">
+                <h1 class="truncate">{bus.Name}</h1>
+                <p>Max Capacity: {bus.Maximum_Capacity__c}</p>
+                <p>Air Conditioning : {hasAirConditioning}</p>
+            </div>
+        </div>
+    </a>
+</template>
